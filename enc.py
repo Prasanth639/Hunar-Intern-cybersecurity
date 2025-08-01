@@ -2,11 +2,10 @@ def encrypt(text, shift):
     result = ""
     for char in text:
         if char.isalpha():
-            # Shift within uppercase or lowercase letters
             base = ord('A') if char.isupper() else ord('a')
             result += chr((ord(char) - base + shift) % 26 + base)
         else:
-            result += char  # Non-alphabet characters are unchanged
+            result += char 
     return result
 def decrypt(text, shift):
     return encrypt(text, -shift)
