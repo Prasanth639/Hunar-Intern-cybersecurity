@@ -1,4 +1,3 @@
-# Function to encrypt the message
 def encrypt(text, shift):
     result = ""
     for char in text:
@@ -9,12 +8,8 @@ def encrypt(text, shift):
         else:
             result += char  # Non-alphabet characters are unchanged
     return result
-
-# Function to decrypt the message
 def decrypt(text, shift):
     return encrypt(text, -shift)
-
-# Main Program
 print("Simple Encryption/Decryption Tool (Caesar Cipher)")
 choice = input("Do you want to (E)ncrypt or (D)ecrypt? ").upper()
 message = input("Enter your message: ")
